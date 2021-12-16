@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import os.path
 
 plt.close("all")
-plt.style.use(["science", "no-latex"])
+#plt.style.use(["science", "no-latex"])
 
 t0 = time.time()
 
