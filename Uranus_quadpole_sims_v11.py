@@ -50,7 +50,6 @@ def rotmat_general(ax1, ax2, ang):
     
     rotax = rotax/np.linalg.norm(rotax)
     ux, uy, uz = np.abs(rotax)
-    print(rotax)
     
     a = 1 - np.cos(ang)
     row1 = [np.cos(ang)+ux**2*a, ux*uy*a-uz*np.sin(ang), ux*uz*a+uy*np.sin(ang)]
