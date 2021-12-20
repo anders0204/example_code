@@ -12,7 +12,7 @@ The result is a trace of the particle around the planet, in this case only the d
 
 ## quad_vs_dip
 This is the code used to investigate where, and how significant the differences are between a pure dipole field
-and the full Uranian (dipole+quadrupole) magnetic field are. The program creates a grid of test points in spherical
+and the full Uranian (dipole+quadrupole) magnetic field. The program creates a grid of test points in spherical
 coordinates around the planet, and calculates both the magnitude (field strength) difference, and the angular (vector) difference
 between the fields. These differences are then mapped to 2D grids in 6 "phi-slices" and plotted.
 
