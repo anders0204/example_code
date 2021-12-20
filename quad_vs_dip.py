@@ -138,7 +138,6 @@ def Bquad(R, a, dipole=False):
 
 # defining the matrices of internal Schmidt coefficients from Herbert (2009)
 # as g[n, m] and h[n, m]
-
 g = np.zeros([3, 3])
 g[1, 0] = 11278
 g[1, 1] = 10928
@@ -218,8 +217,6 @@ for pos in positions_:
 for key in slices.keys():
     slices[key] = np.array(slices[key])
 
-
-
 # creating dictionaries of field differences for each slice
 slices_mag_diff = dict()
 slices_vec_diff = dict()
@@ -243,7 +240,6 @@ for phi in phis:
         # vector difference is just angle
         dot = np.dot(dipole, quadrupole)
         slices_vec_diff[phi][i] = np.rad2deg(np.arccos(dot/(np.linalg.norm(dipole)*np.linalg.norm(quadrupole))))
-
 
 # creating a dictionary of (r, z) coordinates for each slice, where r is the
 # horizontal axis (negative to the left, positive to the right), and matching
@@ -272,7 +268,6 @@ for s in range(len(phis)):
     # final dictionaries containing the field differences
     slices_mag[s] = slices_mag_diff[phis[s]]
     slices_vec[s] = slices_vec_diff[phis[s]]
-    
 
 # plotting
 f, axs = plt.subplots(2, 3)
@@ -343,7 +338,6 @@ for s in range(nSlices):
         ii = 1
     else:    
         jj += 1
-
 
 t = time.time()
 print("That took {:.1f} s.".format(t-t0))
